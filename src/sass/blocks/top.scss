@@ -1,0 +1,16 @@
+.top__container {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, max-content);
+  grid-template-areas: ". top-visit top-account";
+  gap: 5px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.top__visit {
+  grid-area: top-visit;
+}
+
+.top__account {
+  grid-area: top-account;
+}

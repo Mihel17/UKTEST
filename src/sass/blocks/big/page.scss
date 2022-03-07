@@ -27,45 +27,6 @@ html {
   }
 }
 
-body {
-  font-family: $font;
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  line-height: 1.2 !important;
-  // color: $text-color;
-  color: $black;
-  background: white;
-}
-
-body.page .site {
-  font-family: $font;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $font;
-  }
-}
-
-.page__header {
-  width: 100vw !important;
-  //   grid-area: header;
-  min-height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  // background-color: $promo-bg;
-  padding: 0 !important;
-  margin: 0 auto !important;
-  overflow-x: hidden;
-  z-index: 100;
-}
-
 // .page__main {
 //   grid-area: main;
 // }

@@ -1,0 +1,25 @@
+.nav-bar__list {
+  display: grid;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.nav-bar__item {
+  width: max-content;
+  max-width: max-content;
+}
+
+.nav-bar__item-link {
+  max-width: max-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+}
