@@ -1,0 +1,72 @@
+<section id="section-shop">
+  <div class="container">
+    <h2 class="main-title">Our shop</h2>
+
+    <div class="shop__nav-btns  section-nav__btns">
+      <input class="visually-hidden" type="radio" name="shop__nav-btn" id="shop__nav-btn--1" checked>
+      <label class="shop__nav-btn  section-nav__btn" data-category="Uncategorized" for="shop__nav-btn--1">
+        <span class="section-nav__btn-content">Uncategorized</span>
+      </label>
+      <input class="visually-hidden" type="radio" name="shop__nav-btn" id="shop__nav-btn--2">
+      <label class="shop__nav-btn  section-nav__btn" data-category="2" for="shop__nav-btn--2">
+        <span class="section-nav__btn-content">2</span>
+      </label>
+      <input class="visually-hidden" type="radio" name="shop__nav-btn" id="shop__nav-btn--3">
+      <label class="shop__nav-btn  section-nav__btn" data-category="certificate" for="shop__nav-btn--3">
+        <span class="section-nav__btn-content">certificate</span>
+      </label>
+    </div>
+
+    <div class="shop__container"></div>
+
+    <template class="shop__template--1" id="shop-template">
+      <div class="shop__ajax">
+        <?php echo do_shortcode('[product_category per_page="10" orderby="date" order="desc" category="Uncategorized"]'); ?>
+      </div>
+    </template>
+    <template class="shop__template--2" id="shop-template">
+      <div class="shop__ajax">
+        <?php echo do_shortcode('[product_category per_page="10" orderby="date" order="desc" category="2"]'); ?>
+      </div>
+    </template>
+    <template class="shop__template--3" id="shop-template">
+      <div class="shop__ajax">
+        <?php echo do_shortcode('[product_category per_page="10" orderby="date" order="desc" category="certificate"]'); ?>
+      </div>
+    </template>
+
+    <script>
+      const sectionShop = document.querySelector('#section-shop');
+      const sectionShopContainer = sectionShop.querySelector('.shop__container');
+      const shopNavBtns = sectionShop.querySelector('.shop__nav-btns');
+
+      const getProductData = () => {
+        const makeAjaxRequest = (template) => {
+          const ajaxRequestTemplate = sectionShop.querySelector(template)
+            .content
+            .querySelector('.shop__ajax');
+          const ajaxRequest = ajaxRequestTemplate.cloneNode(true);
+          sectionShopContainer.innerHTML = '';
+          sectionShopContainer.appendChild(ajaxRequest);
+        }
+        makeAjaxRequest('.shop__template--1')
+
+        const getCategoryOnClick = (evt) => {
+          const productsCategory = evt.target.dataset.category;
+          // console.log(productsCategory);
+
+          if (productsCategory === 'Uncategorized') {
+            makeAjaxRequest('.shop__template--1')
+          } else if (productsCategory === '2') {
+            makeAjaxRequest('.shop__template--2')
+          } else if (productsCategory === 'certificate') {
+            makeAjaxRequest('.shop__template--3')
+          }
+        }
+        shopNavBtns.addEventListener('click', getCategoryOnClick)
+      }
+      setTimeout(getProductData, 100);
+    </script>
+
+  </div>
+</section>

@@ -1,0 +1,292 @@
+//-----------------------------------
+// ONLY FOR LOCAL TEST
+//-----------------------------------
+.main-header {
+  background-color: $bg-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 100;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.main-nav {
+  width: 100% !important;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  min-height: 60px;
+  align-items: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.main-nav__list {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+//-----------------------------------
+// ONLY FOR LOCAL TEST
+//-----------------------------------
+
+//-----------------------------------
+// WORDPRESS MY HEADER
+//-----------------------------------
+body {
+  .main-nav__item {
+    display: grid !important;
+    align-items: center;
+    align-content: center;
+    justify-content: start;
+    justify-items: start;
+    height: 100%;
+    position: relative;
+    z-index: 101;
+    text-decoration: none;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  .main-nav__item:hover,
+  .main-nav__item:active,
+  .main-nav__item:focus {
+    * {
+      color: $black;
+    }
+  }
+}
+
+.page__breadcrumbs {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background: white;
+  width: 100vw;
+  border-top: 1px solid rgba($grey, 0.3);
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
+}
+
+.page__breadcrumbs-container {
+  width: 100% !important;
+  max-width: 1280px !important;
+  padding: 0 $p1;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  height: 60px;
+  max-height: 60px;
+  padding-bottom: 6px !important;
+  padding-top: 6px !important;
+  align-items: center;
+  align-content: center;
+
+  a {
+    color: $black;
+    position: relative !important;
+    display: grid;
+    align-items: end;
+    align-content: end;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    right: auto !important;
+    left: auto !important;
+    gap: 5px;
+    margin: 0 auto;
+  }
+
+  .site-header-inner__nav-info {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+//-----------------------------------
+// WORDPRESS MY HEADER
+//-----------------------------------
+
+//-----------------------------------
+// header WORDPRESS BONO THEN
+//-----------------------------------
+header.site-header {
+  display: none;
+  //   background-color: white !important;
+  //   border-bottom: 1px solid rgba($grey, 0.3);
+  //   position: fixed;
+  //   width: 100%;
+  //   margin: 0 auto;
+  //   z-index: 101;
+  //   border-top: 1px solid rgba($grey, 0.3);
+  //   color: black !important;
+
+  //   @media (max-width: 992px) {
+  //     max-height: 55px;
+  //     height: 55px;
+  //     padding: 3px 0 0;
+  //   }
+
+  //   @media (min-width: 992px) {
+  //     position: relative;
+  //     margin-bottom: 30px;
+  //     border-top: none;
+  //   }
+
+  //   .promo__btn-icon {
+  //     width: 30px !important;
+  //     height: 30px !important;
+  //   }
+
+  //   .site-header {
+  //     min-height: 80px;
+  //     height: 80px;
+  //     grid-area: main-header;
+  //   }
+
+  //   .site-header-inner {
+  //     width: 100% !important;
+  //     max-width: 1280px !important;
+  //     padding: 0 $p1;
+  //     margin: 0 auto;
+  //     display: grid;
+  //     position: relative;
+  //     height: 50px;
+  //     max-height: 50px;
+
+  //     a {
+  //       position: relative !important;
+  //       display: grid;
+  //       align-items: center;
+  //       align-content: center;
+  //       justify-content: center;
+  //       justify-items: center;
+  //       width: 100%;
+  //       right: auto !important;
+  //       left: auto !important;
+  //       gap: 5px;
+  //       margin: 0 auto;
+  //     }
+
+  //     .site-header-inner__nav-info {
+  //       height: fit-content;
+  //       width: 100%;
+  //       text-align: center;
+  //       text-decoration: none !important;
+  //       font-size: 14px;
+  //       font-weight: 600;
+  //     }
+
+  //     @media (min-width: $mobile2) {
+  //       padding: 0 $p2;
+  //     }
+
+  //     @media (min-width: $tablet) {
+  //       padding: 0 $p3;
+  //     }
+
+  //     @media (min-width: 992px) {
+  //       display: flex;
+  //     }
+  //   }
+
+  //   .site-branding {
+  //     padding: 0 !important;
+  //     margin-right: auto !important;
+  //     text-align: start !important;
+  //     justify-content: flex-start !important;
+  //     display: none;
+
+  //     @media (min-width: 992px) {
+  //       display: block;
+  //     }
+  //   }
+
+  //   .humburger {
+  //     position: relative;
+  //     height: 100%;
+  //     width: 100%;
+  //     display: grid;
+  //     grid-auto-columns: 1fr;
+  //     top: 10px;
+  //     left: auto;
+  //     right: auto;
+  //     gap: 5px;
+
+  //     @media (min-width: $tablet) {
+  //       top: 17px !important;
+  //     }
+
+  //     @media (min-width: $desktop) {
+  //       top: 10px;
+  //     }
+
+  //     .humburger__icon {
+  //       position: relative;
+  //       width: 20px;
+  //       margin: 0 auto;
+  //     }
+  //   }
+
+  //   .top-menu ul li .sub-menu {
+  //     background-color: white !important;
+  //     box-shadow: none;
+  //     left: -15px;
+  //     padding-top: 26px;
+
+  //     &::before {
+  //       content: "";
+  //       position: absolute;
+  //       top: 26px;
+  //       left: 0;
+  //       right: 0;
+  //       height: 0.5px;
+  //       width: 100%;
+  //       background: rgba($grey, 0.3);
+  //     }
+  //   }
+
+  //   .site-title {
+  //     color: $black !important;
+  //   }
+
+  //   * {
+  //     color: $black !important;
+  //   }
+
+  //   a {
+  //     color: $black !important;
+  //   }
+}
+
+// .main-navigation ul li.current-menu-item:after {
+//   left: auto !important;
+//   bottom: auto !important;
+//   height: auto !important;
+// }
+
+// .mobile-menu-placeholder {
+//   top: -100%;
+// }
+
+// .mobile-menu-placeholder.open {
+//   position: fixed;
+//   top: 0 !important;
+//   z-index: 100;
+//   width: 100%;
+//   height: calc(100vh - 50px);
+//   max-height: calc(100vh - 50px);
+//   overflow-y: scroll;
+//   background: white;
+//   margin: 0 !important;
+// }

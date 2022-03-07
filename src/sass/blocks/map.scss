@@ -1,0 +1,305 @@
+.map {
+  background: white;
+  color: $black !important;
+  position: relative;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+
+  &::before {
+    content: "";
+    background: white;
+    height: 1em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 1;
+    transition: all 0.5s;
+
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  .main-title {
+    @media (min-width: 900px) {
+      grid-area: main-title;
+    }
+  }
+}
+
+.map--opened {
+  &::before {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100vh);
+  }
+
+  .about__wrapper {
+    &::before {
+      display: none;
+    }
+  }
+
+  .about__list-btn,
+  .map__img-list,
+  .map__img-list2 {
+    z-index: 3;
+  }
+
+  .map__button-slide {
+    top: auto;
+    bottom: 0;
+    height: 100vh;
+  }
+}
+
+.map__container {
+  position: relative;
+
+  @media (min-width: 900px) {
+    overflow: hidden;
+  }
+}
+
+.map__radius {
+  display: grid;
+  position: relative;
+  width: calc(100% - 2em);
+
+  @media (min-width: 900px) {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 65% 35%;
+    grid-template-areas:
+      "main-title main-title"
+      "map map-about";
+    grid-template-rows: max-content 1fr;
+  }
+}
+
+.map__popup-block {
+  position: relative;
+  top: 0;
+  left: -1em;
+  right: 0;
+  width: 100vw;
+  height: fit-content;
+  max-height: 100vh;
+  margin: 0 auto;
+  background: white;
+  transition: all 0.5s;
+  z-index: 4;
+  order: 3;
+
+  @media (min-width: 900px) {
+    grid-area: map-about;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.map__popup-block--opened {
+  max-height: max-content;
+  transform: translateY(calc(-50vh - 2em + 8px)) !important;
+  margin-bottom: calc(-50vh - 2em + 8px);
+}
+
+.map__img-list,
+.map__img-list2 {
+  position: relative;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  padding: 0 1em 0;
+  margin: 0;
+
+  @media (min-width: 900px) {
+    max-height: 300px;
+    gap: 0;
+    padding: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  & {
+    scrollbar-width: none !important;
+    overflow: -moz-scrollbars-none !important;
+    -ms-overflow-style: none !important;
+  }
+}
+
+.map__img-item {
+  min-width: 80vw;
+  background: white;
+
+  @media (min-width: 900px) {
+    min-width: 100%;
+  }
+
+  img {
+    height: 100%;
+    border-radius: $r;
+    overflow: hidden;
+
+    @media (min-width: 900px) {
+      border-radius: 0;
+    }
+  }
+}
+
+.map__wrapper {
+  position: relative;
+  width: 100%;
+  margin-left: -1em;
+
+  @media (min-width: 900px) {
+    grid-area: map;
+    border-radius: $r 0 0 $r;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0.5;
+  }
+}
+
+.map__content {
+  position: relative;
+  z-index: 0;
+  height: 50vh;
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow: hidden;
+
+  @media (min-width: 900px) {
+    min-height: 100%;
+    border-radius: $r 0 0 $r;
+    overflow: hidden;
+  }
+}
+
+#map .leaflet-popup-pane {
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  max-width: 1px;
+  height: 1px;
+  max-height: 1px;
+  overflow: hidden;
+}
+
+.map__button-slide {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  transition: all 0.4s;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}
+
+.map__scroll-btn:focus {
+  outline: none;
+}
+
+.map__scroll-btn--back,
+.map__scroll-btn--next {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 300px;
+  width: 100px;
+  background: transparent;
+  border: none;
+  z-index: 10;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: white
+      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+      no-repeat center center;
+    background-size: 17px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(300px / 2 - 30px / 2);
+    overflow: hidden;
+  }
+}
+
+.map__scroll-btn--back {
+  left: 0;
+
+  &::before {
+    left: 0.5em;
+    transform: rotate(90deg);
+  }
+}
+
+.map__scroll-btn--next {
+  right: 0;
+
+  &::before {
+    right: 0.5em;
+    transform: rotate(-90deg);
+  }
+}
+
+// fix bag - - -
+.map__popup-block,
+.map__popup-block-content,
+.leaflet-popup-content,
+.about__wrapper {
+  @media (min-width: 900px) {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    display: grid;
+    margin: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    bottom: left !important;
+    bottom: right !important;
+  }
+}
+// fix bag - - -
+
+.map__content {
+  z-index: 0;
+}
+
+.map__content--active {
+  z-index: 3 !important;
+}

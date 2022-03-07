@@ -1,0 +1,29 @@
+.error404 {
+  max-height: 100vh;
+  overflow: hidden;
+
+  main {
+    min-height: calc(100vh - 60px - 2em);
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+
+    section {
+      height: max-content !important;
+      min-height: max-content !important;
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .page-title {
+      text-align: center !important;
+    }
+
+    .site-content {
+      padding-bottom: 60px !important;
+    }
+  }
+}

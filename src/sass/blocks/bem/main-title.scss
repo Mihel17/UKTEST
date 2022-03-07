@@ -1,0 +1,121 @@
+.main-title {
+  position: relative;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: max-content 1fr;
+  padding-top: 1.5em !important;
+  padding-bottom: calc(1.5em + 1px) !important;
+  min-height: 75px;
+
+  @media (min-width: 900px) {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+
+  .main-title__content {
+    display: grid;
+    font-size: calc(1.575rem + 2vw) !important;
+    line-height: 1 !important;
+    color: $black;
+    margin: auto 0;
+    height: fit-content;
+
+    @media (min-width: $tablet) {
+      font-size: 40px !important;
+    }
+
+    &::after {
+      content: "Barbershop in NY.";
+      position: relative;
+      order: 2;
+      width: 100%;
+      height: max-content;
+      font-size: 14px;
+      color: $main-color;
+      align-self: start;
+    }
+  }
+}
+
+.barber-logo {
+  position: relative;
+  left: -39px;
+  margin-right: -63px;
+
+  @media (min-width: 900px) {
+    left: -35px;
+    margin-right: -50px;
+  }
+
+  svg {
+    position: relative;
+    z-index: 2;
+    height: 60px;
+    width: 100px;
+
+    @media (min-width: 900px) {
+      height: 80px;
+    }
+  }
+}
+
+.barber-logo__stripes {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  background: repeating-linear-gradient(
+    -63deg,
+    $red,
+    $red 12.5%,
+    #fff 12.5%,
+    #fff 25%,
+    $main-color 25%,
+    $main-color 37.5%,
+    #fff 37.5%,
+    #fff 50%,
+    $red 50%,
+    $red 62.5%,
+    #fff 62.5%,
+    #fff 75%,
+    $main-color 75%,
+    $main-color 87.5%,
+    #fff 87.5%,
+    #fff 100%
+  );
+  animation: barberpole 1.5s linear infinite;
+  top: 14px;
+  left: 42px;
+  height: 33px;
+  width: 16px;
+
+  @media (min-width: 900px) {
+    top: 20px;
+    left: 40px;
+    height: 40px;
+    width: 20px;
+  }
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 33px;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: 900px) {
+  @keyframes barberpole {
+    from {
+      background-position: 0 40px;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+}

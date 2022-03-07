@@ -1,0 +1,100 @@
+//TECHNICAL--------------------------
+//boostrap
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/grid";
+// @import "../../node_modules/bootstrap/scss/containers";
+//-----------------------------------
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+//mixin
+// @import "global/mixin.scss";
+//vars
+@import "global/vars.scss";
+//fonts
+@import "global/fonts.scss";
+//global
+@import "global/technical.scss";
+//-----------------------------------
+
+//PAGE-------------------------------
+//main
+@import "blocks/big/page.scss";
+//inner
+// @import "blocks/big/inner-page.scss";
+//-----------------------------------
+
+//BIG BLOCKS-------------------------
+@import "blocks/big/main-header.scss";
+// @import "blocks/big/main-content.scss";
+// @import "blocks/big/main-footer.scss";
+
+//-----------------------------------
+// WP MY FOOTER PART
+// @import "blocks/big/footer-header.scss";
+// WP MY FOOTER PART
+//-----------------------------------
+
+//SECTION---------------------------
+// @import "blocks/main-nav.scss";
+//----------------------------------
+
+//SECTION HOME PAGE-----------------
+// @import "blocks/works.scss";
+@import "blocks/cases.scss";
+@import "blocks/servises.scss";
+@import "blocks/about.scss";
+// @import "blocks/galeria.scss";
+@import "blocks/shop.scss";
+// @import "blocks/faq.scss";
+// @import "blocks/contact-fb.scss";
+@import "blocks/map.scss";
+// @import "blocks/fb-feed.scss";
+// @import "blocks/post-box.scss";
+@import "blocks/404.scss";
+@import "blocks/leaflet.scss";
+@import "blocks/related-posts.scss";
+@import "blocks/single-post.scss";
+@import "blocks/single-product.scss";
+@import "blocks/product-archive.scss";
+// @import "blocks/section-header.scss";
+// @import "blocks/payments.scss";
+
+// @import "blocks/about-service.scss";
+// @import "blocks/countries.scss";
+// @import "blocks/companiones.scss";
+// @import "blocks/add-profile.scss";
+// @import "blocks/contact.scss";
+// @import "blocks/address.scss";
+//---------------------------------
+
+//SECTION FORM PAGE----------------
+// @import "blocks/profile-info.scss";
+// @import "blocks/personal-plan.scss";
+// @import "blocks/add-plan.scss";
+// @import "blocks/form-date.scss";
+// @import "blocks/form-direction.scss";
+//-------------------------------
+
+//SECTION CATALOG PAGE-----------
+// @import "blocks/catalog-content.scss";
+// @import "blocks/filter.scss";
+// @import "blocks/companiones-sort.scss";
+// @import "blocks/companiones-blockes.scss";
+//-------------------------------
+
+//BEM BLOCKS---------------------
+// @import "blocks/bem/small-title.scss";
+@import "blocks/bem/main-title.scss";
+@import "blocks/bem/section-nav.scss";
+@import "blocks/bem/table.scss";
+// @import "blocks/bem/modal.scss";
+// @import "blocks/bem/carousel.scss";
+// @import "blocks/bem/accordion.scss";
+//--------------------------------
+
+//FOR JS--------------------------
+// @import "global/script.scss";
+//--------------------------------
+
+//END-----------------------------

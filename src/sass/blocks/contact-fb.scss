@@ -1,0 +1,169 @@
+.contact-fb {
+  background-color: $light-main-color;
+  position: relative;
+
+  .fb-page {
+    span,
+    iframe {
+      min-width: 100% !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.contact-fb__wrapper {
+  display: grid;
+  background: $bg-color;
+  border-radius: $r;
+  overflow: hidden;
+  gap: 0.5em;
+  padding: 1em;
+
+  @media (min-width: $mobile2) {
+    grid-template-columns: 1fr minmax(50%, 500px);
+  }
+
+  @media (min-width: 1080px) {
+    grid-template-columns: 1fr 500px;
+    gap: 30px;
+  }
+
+  .contact-fb__content {
+    padding: 0 !important;
+  }
+}
+
+.contact-fb__right {
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  max-height: calc(500px + 50px + 16px - 64px);
+  overflow: hidden;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    max-width: 500px;
+    order: 2;
+  }
+}
+
+.contact-fb__cover {
+  position: absolute;
+  width: 100%;
+  height: calc(433px);
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.5;
+  background: $bg-color;
+
+  p {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border-radius: $r;
+    border: 1px solid rgba($grey, 0.3);
+    pointer-events: none;
+  }
+}
+
+.contact-fb__right:hover .contact-fb__cover,
+.contact-fb__right:active .contact-fb__cover {
+  transition: opacity 0.5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-fb__title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+  height: max-content;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 0 !important;
+  padding-bottom: 19px;
+  background: $bg-color;
+  position: relative;
+  z-index: 3;
+
+  @media (min-width: $tablet) {
+    align-items: top;
+    align-content: top;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.contact-fb__messanger {
+  position: relative;
+  z-index: 0;
+  top: -69px;
+}
+
+.contact-fb__messanger,
+.fb-page {
+  min-height: 500px;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.contact-fb__radio {
+  width: max-content;
+  max-width: max-content;
+}
+
+.contact-fb__step {
+  color: white !important;
+  border-radius: 50% !important;
+  background-color: $main-color;
+  width: 50px !important;
+  min-width: 50px;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.contact-fb__content {
+  order: -1 !important;
+
+  @media (min-width: $tablet) {
+    order: 1 !important;
+  }
+}
+
+.contact-fb__content {
+  padding: 1em;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-width: 250px;
+
+  @media (min-width: $tablet) {
+    padding: 2em;
+  }
+
+  fieldset {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+}

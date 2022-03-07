@@ -1,0 +1,57 @@
+.section-nav__btns {
+  margin-bottom: 1em;
+  display: flex;
+  gap: 5px;
+  overflow-x: scroll;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  & {
+    scrollbar-width: none !important;
+    overflow: -moz-scrollbars-none !important;
+    -ms-overflow-style: none !important;
+  }
+}
+
+input:checked + label .section-nav__btn-content {
+  border-color: $main-color;
+  color: $main-color;
+}
+
+.section-nav__btn {
+  height: fit-content;
+  width: fit-content;
+  background-color: white;
+  margin: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  .section-nav__btn-content {
+    min-width: max-content;
+    height: 36px;
+    border: 2.5px solid $black;
+    padding: 0.5em 1em;
+    border-radius: 20px !important;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: $black;
+  }
+
+  .section-nav__btn-content:hover,
+  .section-nav__btn-content:active,
+  .section-nav__btn-content:focus {
+    color: $main-color;
+    border-color: $main-color;
+  }
+}
