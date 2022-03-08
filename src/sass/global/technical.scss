@@ -10,7 +10,7 @@
 .container,
 .site-content {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1980px;
   margin: 0 auto;
 }
 
@@ -25,6 +25,10 @@
 
   @media (min-width: 800px) {
     padding: 0 2em;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 140px;
   }
 }
 

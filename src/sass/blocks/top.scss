@@ -2,9 +2,8 @@
   display: grid;
   grid-template-columns: 1fr repeat(2, max-content);
   grid-template-areas: ". top-visit top-account";
-  gap: 5px;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  gap: 30px;
+  padding: 23px;
 }
 
 .top__visit {
@@ -13,4 +12,15 @@
 
 .top__account {
   grid-area: top-account;
+  text-transform: capitalize;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: white;
+    position: absolute;
+    left: -15px;
+  }
 }

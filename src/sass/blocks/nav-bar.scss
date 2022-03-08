@@ -1,8 +1,8 @@
 .nav-bar__list {
   display: grid;
-  gap: 15px;
+  gap: 53px;
   list-style: none;
-  padding: 0;
+  padding: 36px 20px;
   margin: 0;
 
   @media (min-width: 800px) {
@@ -18,8 +18,9 @@
 }
 
 .nav-bar__item-link {
+  // font-size: 30px;
   max-width: max-content;
   text-decoration: none;
   text-transform: uppercase;
-  color: red;
+  color: $red;
 }

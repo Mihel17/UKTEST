@@ -1,0 +1,72 @@
+.adds-item {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+.adds-item__content {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 40px;
+  padding: 40px;
+  background: url("../img/content_plane_bg.webp");
+  color: white;
+
+  p,
+  h3 {
+    margin: 0;
+  }
+}
+
+.adds-item__title {
+  min-height: 70px;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  background: url("../img/dark background.webp");
+  text-transform: uppercase;
+  color: white;
+  padding: 10px 40px;
+}
+
+.adds__offers {
+  display: grid;
+  gap: 40px;
+  padding: 0;
+}
+
+.adds__offer {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    "adds-img adds-title"
+    "adds-img adds-text";
+  gap: 15px;
+
+  img {
+    grid-area: adds-img;
+    min-width: 200px;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.adds__offer-text {
+  grid-area: adds-text;
+  align-self: start;
+}
+
+.adds__offer-date {
+  font-weight: 900;
+  max-width: max-content;
+  padding: 10px;
+  grid-area: adds-title;
+  align-self: end;
+  text-transform: uppercase;
+  color: white;
+  background: url("../img/logo_plane.webp") no-repeat center center;
+  border-top: 2px solid white;
+  border-right: 3px solid white;
+}

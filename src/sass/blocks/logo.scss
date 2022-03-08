@@ -1,6 +1,14 @@
 .logo {
-  width: 200px;
-  height: 200px;
-  background: url("../img/logo_plane.webp") no-repeat center center;
+  min-width: 200px;
+  min-height: 200px;
+  height: 100%;
+  background: url("../img/logo_plane.webp");
   margin: auto;
+  background-size: cover;
+  padding: 33px 10px;
+}
+
+.logo__img {
+  min-width: 410px;
+  min-height: 157px;
 }
